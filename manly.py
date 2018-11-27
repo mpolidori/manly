@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
     manly
     ~~~~~
@@ -21,6 +19,7 @@ __version__ = "0.4.0"
 
 import argparse
 import functools
+import os
 import re
 import subprocess
 import sys
@@ -122,15 +121,15 @@ def manly(command):
         command = command.split(" ")
     program = command[0]
     flags = command[1:]
-
-    # due to AttributeError's, setting MANWIDTH is disabled for now
-    # TODO: we set MANWIDTH, so we don't rely on the users terminal width
+    # we set MANWIDTH, so we don't rely on the users terminal width
     # try `export MANWIDTH=80` -- makes manuals more readable imo :)
+    man_env = {}
+    man_env.update(os.environ)
+    man_env["MANWIDTH"] = "80"
     try:
         process = subprocess.Popen(
             ["man", "--", program],
-            # TODO: fix setting manwidth causing AttributeError's
-            # env={"MANWIDTH": "80"},
+            env=man_env,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
         )
