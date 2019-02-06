@@ -1,3 +1,6 @@
+NOTE: This fork is solely for https://aur.archlinux.org/packages/manly-git/.
+Please see https://github.com/carlbordum/manly for the original project.
+
 # manly
 manly is a compliment to man pages.
 
@@ -29,28 +32,6 @@ Short and sweet!
 ## Installation
 manly supports Python 2 and 3
 
-    $ pip install manly
-
-
-An unofficial Arch User Repository is maintained by mpolidori at
-https://aur.archlinux.org/packages/manly-git/.
-
-
-## Develop with me :)
-
-Ideas, contributions and everything else is welcome!
-
-``` bash
-$ git clone https://github.com/carlbordum/manly
-$ cd manly
-$ python -m venv manlyenv
-$ . manlyenv/bin/activate
-$ python manly.py
-```
-
-Make sure test locally before sending a Pull Request using:
-
-``` bash
-$ pip install pytest
-$ py.test
-```
+    $ git clone https://aur.archlinux.org/manly-git.git
+    $ cd manly-git
+    $ makepkg -si
