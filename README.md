@@ -33,7 +33,7 @@ manly supports Python 2 and 3
 
 
 An unofficial Arch User Repository is maintained by mpolidori at
-https://aur.archlinux.org/packages/manly-git/.
+https://aur.archlinux.org/packages/manly/.
 
 
 ## Develop with me :)
