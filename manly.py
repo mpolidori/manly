@@ -16,7 +16,7 @@ from __future__ import print_function
 
 
 __author__ = "Carl Bordum Hansen"
-__version__ = "0.4.0"
+__version__ = "0.4.1"
 
 
 import argparse
