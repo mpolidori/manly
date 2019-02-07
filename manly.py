@@ -188,7 +188,7 @@ def main():
         print_err(
             "manly: missing COMMAND\nTry 'manly --help' for more information.",
         )
-        sys.exit(0)
+        sys.exit(1)
 
     title, output = manly(args.command)
     if output:
