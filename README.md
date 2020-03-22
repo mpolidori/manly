@@ -29,7 +29,7 @@ notify-send - a program to send desktop notifications
 Short and sweet!
 
 
-## Installation
+## Installation on Arch Linux
 manly supports Python 2 and 3
 
     $ git clone https://aur.archlinux.org/manly-git.git
